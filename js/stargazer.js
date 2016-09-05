@@ -12,14 +12,12 @@ $(document).ready(function() {
     $.ajax({
       url: api,
       dataType: "jsonp",
-      jsonpCallback:"logResults"
-
-
+      jsonpCallback:"stargazer"
     // }).done(function(data) {
     //   console.log(data);
     })
-      .fail(function () {
-        console.log ('alert')
+    .fail(function () {
+      console.log ('alert')
       })
 
 
