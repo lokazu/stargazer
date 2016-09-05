@@ -2,10 +2,11 @@ $(document).ready(function() {
   $('#search').on('submit', function() {
     var name = $('#search-name').val();
     var api = 'http://www.strudel.org.uk/lookUP/json/?name=' + name;
+
     console.log(name);
 
 
-    
+
 
 
     $.ajax({
@@ -29,6 +30,9 @@ $(document).ready(function() {
 function stargazer(json) {
   // console.log(json);
   console.log('chikitout', json);
+  $('#preview')
+
+
 }
 
 
