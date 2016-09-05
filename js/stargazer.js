@@ -4,45 +4,32 @@ $(document).ready(function() {
     var api = 'http://www.strudel.org.uk/lookUP/json/?name=' + name;
 
     console.log(name);
-
-
-
-
-
     $.ajax({
-      url: api,
-      dataType: "jsonp",
-      jsonpCallback:"stargazer"
-    // }).done(function(data) {
-    //   console.log(data);
-    })
-    .fail(function () {
-      console.log ('alert')
+        url: api,
+        dataType: "jsonp",
+        jsonpCallback: "stargazer"
+          // }).done(function(data) {
+          //   console.log(data);
+      })
+      .fail(function() {
+        console.log('alert')
       })
 
-
-    })
     return false;
+  })
+
 });
 
 function stargazer(json) {
   // console.log(json);
-  if(json.image === undefined){
-  $('#preview').html("<p>There ain't no star with that name!</p>");
+  if (json.image === undefined) {
+    $('#preview').html("<p>There ain't no star with that name!</p>");
   } else {
     $('#preview').html('<img src="' + json.image.src + '">');
-    }
+  }
 };
 
-
-
-
-
-
-
-
-
-  // requires "jsonp" datatype.
+// requires "jsonp" datatype.
 
 // $.ajax({
 //     data: someData,
