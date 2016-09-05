@@ -8,10 +8,10 @@ $(document).ready(function() {
         url: api,
         dataType: "jsonp",
         jsonpCallback: "stargazer"
-          // }).done(function(data) {
-          //   console.log(data);
+          }).done(function(data) {
+            console.log(data);
       })
-      .done(function() {
+      .fail(function() {
         // console.log('alert')
       })
 
