@@ -11,7 +11,7 @@ $(document).ready(function() {
           // }).done(function(data) {
           //   console.log(data);
       })
-      .fail(function() {
+      .done(function() {
         // console.log('alert')
       })
 
