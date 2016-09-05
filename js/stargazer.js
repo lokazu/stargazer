@@ -3,7 +3,7 @@ $(document).ready(function() {
     var name = $('#search-name').val();
     var api = 'http://www.strudel.org.uk/lookUP/json/?name=' + name;
 
-    console.log(name);
+    // console.log(name);
     $.ajax({
         url: api,
         dataType: "jsonp",
@@ -12,7 +12,7 @@ $(document).ready(function() {
           //   console.log(data);
       })
       .fail(function() {
-        console.log('alert')
+        // console.log('alert')
       })
 
     return false;
@@ -22,10 +22,10 @@ $(document).ready(function() {
 
 function stargazer(json) {
   // console.log(json);
-  if (json.image === undefined) {
-    $('#preview').html("<p>There ain't no star with that name!</p>");
+  if (json.image) {
+    $('#preview').html('<img src="http:' + json.image.src '">')
   } else {
-    $('#preview').html('<img src="' + json.image.src + '">');
+    alert('Star not found')
   }
 };
 
