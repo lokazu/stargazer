@@ -27,11 +27,14 @@ $(document).ready(function() {
 
 function stargazer(json) {
   // console.log(json);
-  console.log('chikitout', json);
-  $('#preview')
+  if(json.image === undefined){
+  $('#preview').html("<p>There ain't no star with that name!</p>");
+  } else {
+    $('#preview').html('<img src="' + json.image.src + '">');
+    }
+};
 
 
-}
 
 
 
