@@ -12,7 +12,7 @@ $(document).ready(function() {
     $.ajax({
       url: api,
       dataType: "jsonp",
-      jsonpCallback:"stargazer"
+      jsonpCallback:"logResults"
 
 
     // }).done(function(data) {
