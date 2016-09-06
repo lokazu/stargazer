@@ -10,13 +10,13 @@ $(document).ready(function() {
         dataType: "jsonp",
         jsonpCallback: "stargazer"
       })
-      .done(function(data) {
-      //   console.log(data);
-      })
-      // .fail(function() {
-      //   alert('Are you sure about the star name?')
+      // .done(function(name) {
+      // //   console.log(data);
+      // })
+      .fail(function() {
+        // alert('Are you sure about the star name?')
         // console.log('hey');
-      // });
+      });
 
     return false;
   });
@@ -28,7 +28,7 @@ function stargazer(json) {
   if (json.image) {
     $('#preview').html('<img src="' + json.image.src + '">')
   } else {
-    alert('Star not found')
+    alert('Star not found');
   }
 };
 
