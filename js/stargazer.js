@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $('#search').on('submit', function() {
     var name = $('#search-name').val();
     var api = 'http://www.strudel.org.uk/lookUP/json/?name=' + name;
@@ -8,22 +9,24 @@ $(document).ready(function() {
         url: api,
         dataType: "jsonp",
         jsonpCallback: "stargazer"
-          }).done(function(data) {
-            console.log(data);
       })
-      .fail(function() {
-        // console.log('alert')
+      .done(function(data) {
+      //   console.log(data);
       })
+      // .fail(function() {
+      //   alert('Are you sure about the star name?')
+        // console.log('hey');
+      // });
 
     return false;
-  })
+  });
 
 });
 
 function stargazer(json) {
   // console.log(json);
   if (json.image) {
-    $('#preview').html('<img src="http:' + json.image.src '">')
+    $('#preview').html('<img src="' + json.image.src + '">')
   } else {
     alert('Star not found')
   }
