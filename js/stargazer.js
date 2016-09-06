@@ -14,7 +14,7 @@ $(document).ready(function() {
       // //   console.log(data);
       // })
       .fail(function() {
-        // alert('Are you sure about the star name?')
+        alert('are you sure?')
         // console.log('hey');
       });
 
